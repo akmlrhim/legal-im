@@ -31,7 +31,7 @@ const otherLocale = computed(() => (props.locale === 'id' ? 'en' : 'id'))
         </span>
       </RouterLink>
 
-      <nav class="docnav" :aria-label="t.footerNote">
+      <nav class="docnav">
         <RouterLink
           v-for="key in docKeys"
           :key="key"

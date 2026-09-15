@@ -21,14 +21,14 @@ const year = new Date().getFullYear()
 				<p class="site-footer__name">{{ company.name }}</p>
 			</div>
 
-			<nav class="site-footer__nav" :aria-label="t.footerNote">
+			<nav class="site-footer__nav">
 				<RouterLink v-for="key in docKeys" :key="key" :to="pathFor(key, locale)">
 					{{ t.nav[key] }}
 				</RouterLink>
 			</nav>
 
 			<p class="site-footer__copy">
-				&copy; {{ year }} {{ company.name }}. {{ t.footerNote }}.
+				&copy; {{ year }} {{ company.name }}.
 			</p>
 		</div>
 	</footer>

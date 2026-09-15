@@ -41,7 +41,6 @@ export const ui = {
       `${n} isian masih berupa placeholder, ditandai dengan garis putus-putus di sepanjang halaman. Lengkapi di src/content/company.js sebelum dipublikasikan.`,
     draftDismiss: 'Sembunyikan',
     otherDoc: 'Dokumen lainnya',
-    footerNote: 'Dokumen hukum',
     print: 'Cetak',
   },
   en: {
@@ -59,7 +58,6 @@ export const ui = {
       `${n} values are still placeholders, marked with a dashed underline throughout. Fill them in at src/content/company.js before publishing.`,
     draftDismiss: 'Dismiss',
     otherDoc: 'Other document',
-    footerNote: 'Legal documents',
     print: 'Print',
   },
 }
