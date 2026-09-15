@@ -77,11 +77,6 @@ watchEffect(() => {
           <DocumentBody :blocks="section.blocks" :locale="locale" />
         </section>
 
-        <aside class="doc-disclaimer">
-          <p class="doc-disclaimer__title">{{ t.disclaimerTitle }}</p>
-          <p>{{ doc.disclaimer }}</p>
-        </aside>
-
         <p class="doc-totop">
           <a href="#top">{{ t.backToTop }}</a>
         </p>

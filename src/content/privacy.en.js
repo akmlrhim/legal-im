@@ -374,6 +374,4 @@ export default {
       ],
     },
   ],
-  disclaimer:
-    'This document is a general template and does not constitute legal advice. Have it reviewed by qualified legal counsel before publication.',
 }

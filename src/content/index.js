@@ -36,7 +36,6 @@ export const ui = {
     switchLabel: 'EN',
     currentLabel: 'ID',
     languageGroup: 'Pilihan bahasa',
-    disclaimerTitle: 'Bukan nasihat hukum',
     draftTitle: 'Dokumen ini belum siap terbit',
     draftBody: (n) =>
       `${n} isian masih berupa placeholder, ditandai dengan garis putus-putus di sepanjang halaman. Lengkapi di src/content/company.js sebelum dipublikasikan.`,
@@ -55,7 +54,6 @@ export const ui = {
     switchLabel: 'ID',
     currentLabel: 'EN',
     languageGroup: 'Language',
-    disclaimerTitle: 'Not legal advice',
     draftTitle: 'This document is not ready to publish',
     draftBody: (n) =>
       `${n} values are still placeholders, marked with a dashed underline throughout. Fill them in at src/content/company.js before publishing.`,

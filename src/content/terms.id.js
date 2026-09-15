@@ -393,6 +393,4 @@ export default {
       ],
     },
   ],
-  disclaimer:
-    'Dokumen ini merupakan templat umum dan bukan nasihat hukum. Mintalah peninjauan oleh penasihat hukum yang kompeten sebelum dipublikasikan.',
 }
