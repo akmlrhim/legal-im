@@ -1,11 +1,22 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import RichText from './RichText.vue'
 import { pathFor } from '../content/index.js'
 
-defineProps({
+const props = defineProps({
   blocks: { type: Array, required: true },
   locale: { type: String, required: true },
+  sectionNum: { type: Number, default: null },
+})
+
+const hIndexFor = computed(() => {
+  const m = new Map()
+  let c = 0
+  props.blocks.forEach((b, i) => {
+    if (b.t === 'h') m.set(i, ++c)
+  })
+  return m
 })
 </script>
 
@@ -19,7 +30,10 @@ defineProps({
       <RichText :text="block.text" />
     </p>
 
-    <h3 v-else-if="block.t === 'h'" class="doc-h3">{{ block.text }}</h3>
+    <h3 v-else-if="block.t === 'h'" class="doc-h3">
+      <span v-if="sectionNum !== null" class="doc-h3__num" aria-hidden="true">{{ sectionNum }}.{{ hIndexFor.get(i) }}</span>
+      {{ block.text }}
+    </h3>
 
     <ul v-else-if="block.t === 'ul'" class="doc-list">
       <li v-for="(item, j) in block.items" :key="j">

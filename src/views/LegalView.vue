@@ -2,7 +2,6 @@
 import { computed, ref, watchEffect } from 'vue'
 import DocumentBody from '../components/DocumentBody.vue'
 import RichText from '../components/RichText.vue'
-import Footer from '../components/Footer.vue'
 import Header from '../components/Header.vue'
 import NotFound from './NotFound.vue'
 import { countPlaceholders } from '../content/company.js'
@@ -74,16 +73,11 @@ watchEffect(() => {
             <span class="doc-section__num" aria-hidden="true">{{ i + 1 }}</span>
             <span>{{ section.title }}</span>
           </h2>
-          <DocumentBody :blocks="section.blocks" :locale="locale" />
+          <DocumentBody :blocks="section.blocks" :locale="locale" :section-num="i + 1" />
         </section>
 
-        <p class="doc-totop">
-          <a href="#top">{{ t.backToTop }}</a>
-        </p>
       </article>
     </main>
-
-    <Footer :locale="locale" />
   </div>
 
   <NotFound v-else />

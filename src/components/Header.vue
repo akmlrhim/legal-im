@@ -25,10 +25,6 @@ const otherLocale = computed(() => (props.locale === 'id' ? 'en' : 'id'))
           alt=""
           decoding="async"
         />
-        <span class="brand__name">
-          <span class="brand__word">Impost</span>
-          <span class="brand__word brand__word--accent">Media</span>
-        </span>
       </RouterLink>
 
       <nav class="docnav">
